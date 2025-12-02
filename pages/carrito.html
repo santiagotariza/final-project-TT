@@ -25,17 +25,16 @@
         </header>
 
         <main>
-            <h1 class="titulo-contacto">Contáctanos</h1> <form class="form-contacto" action="https://formspree.io/f/mjkapepo" method="POST">
-                <div class="grupo-input">
-                    <label for="email">Tu email:</label> <input type="email" name="email" id="email" required>
-                </div>
-
-                <div class="grupo-input">
-                    <label for="message">Tu mensaje:</label>
-                    <textarea name="message" id="message" required></textarea>
-                </div>
-
-                <button type="submit" class="btn">Enviar</button> </form>
+            <h1>Carrito de compras</h1>
+            <section id="contenedor-carrito">
+                <!-- Los productos añadidos al carrito se mostrarán aquí -->
+            </section>
+            <section>
+                <div class="acciones-carrito" id="acciones-carrito"></div>
+            </section>
+            <section>
+                <div id="resumen-carrito"></div>
+            </section>
         </main>
         <footer>
             <p>&copy; 2025 Peluches de IKEA para TT. Todos los derechos reservados.</p>
@@ -47,5 +46,6 @@
                 </ul>
             </nav>
         </footer>
+        <script type="module" src=""../js/carrito.js""></script>
     </body>
 </html>
