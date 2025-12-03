@@ -1,29 +1,33 @@
-*{
+/* =========================================
+   RESET Y ESTILOS BASE
+   ========================================= */
+
+/* Reseteo universal para eliminar margenes por defecto */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
-    /* 1rem = 10px */
+/* Definición de la unidad REM (1rem = 10px) */
+html {
     font-size: 62.5%;
 }
 
-body{
+/* Configuración del cuerpo, tipografía y layout principal (Sticky Footer) */
+body {
     font-family: 'Noto Sans', sans-serif;
-    background-color: black;
-    color: #333;
+    background-color: white;
+    color: black;
     line-height: 1.5;
     font-size: 1.6rem;
-
-    background: white;
-    color: black;
-
+    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+/* Contenedor principal centrado */
 main {
     width: 80%;
     margin: auto;
@@ -35,6 +39,11 @@ main {
     align-items: center;
 }
 
+/* =========================================
+   TIPOGRAFÍA Y COMPONENTES GLOBALES
+   ========================================= */
+
+/* Títulos principales */
 h1 {
     color: rgb(68, 68, 68);
     font-size: 2.4rem;
@@ -42,6 +51,7 @@ h1 {
     line-height: 1.2;
 }
 
+/* Subtítulos */
 h2 {
     color: black;
     font-size: 2rem;
@@ -50,6 +60,7 @@ h2 {
     margin-bottom: 1rem;
 }
 
+/* Botón estándar (Azul) */
 .btn {
     display: inline-block;
     background-color: #0057AD;
@@ -64,62 +75,62 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-header{
-    background-color: #fff;
-    color: #333;
+.btn:hover {
+    background-color: #004080;
+}
+
+/* =========================================
+   HEADER (ENCABEZADO)
+   ========================================= */
+
+/* Contenedor principal del header */
+header {
+    background-color: #0057AD;
+    color: #ffffff;
     width: 100%;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 4rem;
     text-align: center;
 }
 
-footer {
-    flex-direction: column;
+/* Contenedor del logo y la imagen pequeña */
+.div-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
-    align-items: center;
-    text-align: center;
-}
-
-footer nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    list-style: none;
+    
+    background-color: transparent;
+    color: white;
+    box-shadow: none;
+    border-radius: 0;
     padding: 0;
-    margin: 0;
+    width: auto;
 }
 
-footer nav ul li {
-    cursor: pointer;
+/* Imagen pequeña dentro del logo (pandilla peluches) */
+.div-logo img {
+    height: 4rem;
+    width: auto;
+    object-fit: contain;
 }
 
-.div-logo{
-    margin-left: 2rem;
-    font-size: 3rem;
-    font-weight: bold;
-    width: 100%;
-    max-width: 400px;
-    background: white;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: black;
-}
-
+/* Texto del logo y enlaces del menú */
 .logo,
-.header-nav ul li a{
+.header-nav ul li a {
     color: inherit;
     text-decoration: none;
     font-size: 2.4rem;
-    padding: 2rem;
+    padding: 1rem;
     display: inline-block;
 }
 
+/* Navegación del header */
 .header-nav {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .header-nav ul {
@@ -130,50 +141,131 @@ footer nav ul li {
     margin: 2rem;
 }
 
+/* Botón especial del carrito de compras*/
+.carrito-icono {
+    background-color: white;
+    color: black !important;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem !important;
+    
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.carrito-icono:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+/* =========================================
+   FOOTER (PIE DE PÁGINA)
+   ========================================= */
+
+/* Contenedor principal del footer */
+footer {
+    background-color: #0057AD;
+    color: #ffffff;
+    
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    
+    padding: 2rem 0;
+    width: 100%;
+}
+
+/* Lista de redes sociales */
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 footer nav ul li {
     padding: 1rem;
-    list-style: none;
+    cursor: pointer;
 }
 
-/* ------------------------- */
-/*           HOME            */
-/* ------------------------- */
+/* Enlaces del footer*/
+footer nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+}
 
-.titulo-home{
-    margin: 3rem 0;
+footer nav ul li a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* =========================================
+   SECCIÓN: HOME (INICIO)
+   ========================================= */
+
+/* Título de bienvenida */
+.titulo-home {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
     text-align: center;
 }
 
-.titulo-productos{
-    margin: 3rem 0;
-    text-align: center;
-}
-
-.parrafo{
+/* Párrafo de bienvenida */
+.parrafo {
     width: 80%;
-    padding: 3rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    
     text-align: center;
     font-size: 1.8rem;
 }
 
-.contenedor-productos{
+/* Imagen central de IKEA (SVG) */
+.logo-peluches-main {
+    width: 25rem;
+    height: auto;
+    margin: 0; 
+}
+
+/* =========================================
+   SECCIÓN: PRODUCTOS (CARDS)
+   ========================================= */
+
+/* Título de la sección productos */
+.titulo-productos {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+/* Contenedor flexible de las tarjetas */
+.contenedor-productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
 
-.card{
+/* Tarjeta individual de producto */
+.card {
     background: white;
     color: black;
     width: 40rem;
-    max-width: 100%;
+    max-width: 50%;
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
     overflow: hidden;
 
     text-align: center;
+    font-size: 2rem;
     transition: transform 0.3s ease;
 
     display: flex;
@@ -183,23 +275,61 @@ footer nav ul li {
     gap: 1rem;
 }
 
-.card img{
+/* Imagen del producto */
+.card img {
     width: 100%;
     height: 25rem;
     object-fit: scale-down;
 }
 
-/* ------------------------- */
-/*         Contacto          */
-/* ------------------------- */
+/* Nombre del producto (Título tarjeta) */
+.card h3 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-top: 1rem;
+    padding: 0 2rem;
+}
 
+/* Descripción y precio (Texto tarjeta) */
+.card p {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Botón de compra dentro de la tarjeta */
+.card .btn {
+    width: 50%;
+    align-self: center;
+}
+
+/* Estilo para la descripción (texto normal) */
+.card .descripcion {
+    font-size: 1.4rem;
+    color: #555;
+    flex-grow: 1;
+}
+
+/* Estilo para el precio (destacado) */
+.card .precio {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0057AD;
+    margin: 1rem 0;
+}
+
+/* =========================================
+   SECCIÓN: CONTACTO
+   ========================================= */
+
+/* Título del formulario */
 .titulo-contacto {
     margin: 2rem 0;
 }
 
-
+/* Contenedor del formulario */
 .form-contacto {
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(239, 239, 239);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -209,19 +339,27 @@ footer nav ul li {
     font-size: 2rem;
     padding: 2rem;
     border-radius: 0.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
 
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0,
- 0, 0.3) 0px 3px 7px -3px;}   
+/* Botón de enviar formulario */
+.form-contacto .btn {
+    width: 50%;
+    align-self: center;
+    margin-top: 1rem;
+}
 
- .grupo-input {
+/* Agrupador de label + input */
+.grupo-input {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 2rem;
- }
+}
 
- .grupo-input input,
-    .grupo-input textarea {
+/* Estilos compartidos para inputs y textareas */
+.grupo-input input,
+.grupo-input textarea {
     padding: 1rem;
     font-size: 1.6rem;
     border: none;
@@ -229,28 +367,167 @@ footer nav ul li {
     border-bottom: #333 0.2rem solid;
     border-radius: 0.5rem;
     width: 100%;
- }
+}
 
-/* ------------------------- */
-/*           MEDIA           */
-/* ------------------------- */
+/* Estilo específico para el área de mensaje */
+.grupo-input textarea {
+    min-height: 15rem;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* =========================================
+   CARRITAO DE COMPRAS
+   ========================================= */
+
+/* Contenedor general para limitar el ancho y centrar */
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem 0;
+}
+
+/* Tarjeta individual del carrito (Fila) */
+.card-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #eee;
+}
+
+/* Imagen dentro del carrito */
+.card-carrito img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+}
+
+/* Título del producto */
+.card-carrito h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    flex: 1;
+    margin: 0 2rem;
+    text-align: left;
+}
+
+/* Precio en el carrito */
+.precio-carrito {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0057AD;
+    margin-right: 2rem;
+    white-space: nowrap;
+}
+
+/* Ajustes específicos para botones del carrito */
+.btn-eliminar-carrito {
+    background-color: #FF4C4C;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.btn-eliminar-carrito:hover {
+    background-color: #d63c3c;
+}
+
+/* Mensaje cuando está vacío */
+.mensaje-carrito-vacio {
+    text-align: center;
+    font-size: 2rem;
+    color: #666;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+/* Botón de vaciar (abajo del todo) */
+.btn-vaciar-carrito {
+    background-color: #333;
+    margin-top: 2rem;
+}
+.btn-vaciar-carrito:hover {
+    background-color: #000;
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVIDAD)
+   ========================================= */
 
 @media (max-width: 768px) {
+    /* Ajuste vertical para header y footer en móviles */
     header, footer {
         flex-direction: column;
         align-items: center;
         display: flex;
     }
 
+    /* Centrado de elementos del header */
     header .div-logo,
     .header-nav {
         margin: 0;
         text-align: center;
     }
 
-    .contenedor-productos{
+    /* Productos en columna única */
+    .contenedor-productos {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* =========================================
+   RESPONSIVIDAD DEL CARRITO (MÓVIL)
+   ========================================= */
+
+@media (max-width: 768px) {
+    .card-carrito {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .card-carrito h3 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .card-carrito .precio-carrito {
+        margin: 0;
+    }
+
+    
+    .card-carrito img {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .btn-eliminar-carrito {
+        width: 100%;
+    }
+}
+.btn-eliminar-carrito {
+    background-color: #FF4C4C;
+    margin-top: 1rem;
+}
+
+.btn-vaciar-carrito {
+    background-color: #FF4C4C;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.btn-vaciar-carrito:hover {
+    background-color: #e04343;
 }

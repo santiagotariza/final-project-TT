@@ -1,8 +1,44 @@
 [
-    {"id": "1", "nombre": "Peluche Oso", "precio": 6.99, "img": "img/oso.avif"},
-    {"id": "2", "nombre": "Peluche Pulpo", "precio": 5.99, "img": "img/pulpo.avif"},
-    {"id": "3", "nombre": "Peluche Tiburon", "precio": 4.99, "img": "img/tiburon.avif"},
-    {"id": "4", "nombre": "Peluche Suricata", "precio": 4.99, "img": "img/suricata.avif"},
-    {"id": "5", "nombre": "Peluche Panda", "precio": 3.99, "img": "img/panda.avif"},
-    {"id": "6", "nombre": "Peluche Jirafa", "precio": 6.99, "img": "img/jirafa.avif"}
+    {
+        "id": 1,
+        "nombre": "Oso",
+        "precio": 6.99,
+        "img": "./img/oso.avif",
+        "descripcion": "A este osito de peluche le gusta todo, pero sobre todo los frutos del bosque, tanto los azules como los rojos. Un amigo fiel al que le encanta darte abrazos y mimos cuando necesitas un poco de cariño."
+    },
+    {
+        "id": 2,
+        "nombre": "Pulpo",
+        "precio": 5.99,
+        "img": "./img/pulpo.avif",
+        "descripcion": "El pulpo es un animal marino único con 8 tentáculos y la capacidad para camuflarse. Imagina todas las increíbles aventuras que tu hijo puede vivir junto a este compañero."
+    },
+    {
+        "id": 3,
+        "nombre": "Tiburon",
+        "precio": 4.99,
+        "img": "./img/tiburon.avif",
+        "descripcion": "Las crías de tiburones aprenden rápidamente a ser independientes y a cuidar de sí mismas. Tu pequeño tardará un poco más, pero con este peluche se sentirá más seguro para aprender cada día."
+    },
+    {
+        "id": 4,
+        "nombre": "Suricata",
+        "precio": 4.99,
+        "img": "./img/suricata.avif",
+        "descripcion": "Esta suricata tiene muchos detalles adorables, desde la nariz puntiaguda hasta la forma especial de las patas traseras. Pero quizás sean sus ojos curiosos los que la convierten en la favorita de los niños al instante."
+    },
+    {
+        "id": 5,
+        "nombre": "Panda",
+        "precio": 3.99,
+        "img": "./img/panda.avif",
+        "descripcion": "En la naturaleza, un panda adulto come aproximadamente 38 kilos de bambú todos los días. Pero este peluche blanco y negro no necesita comida, solo mucho amor."
+    },
+    {
+        "id": 6,
+        "nombre": "Jirafa",
+        "precio": 6.99,
+        "img": "./img/jirafa.avif",
+        "descripcion": "¿Cuántas manchitas tiene? Seguro que habrá más de una noche que a tu hijo le apetecerá contarlas. Léele algún cuento sobre la hermosa sabana para que se relaje antes de dormir con esta suave jirafa en sus brazos."
+    }
 ]
